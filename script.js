@@ -7,9 +7,31 @@
 // Час роботи проміса має складати length * 50ms.
 // (Якщо викликати getRandomChinese(4), отримаємо результат "촛궻簽紙" за 200ms
 
-const getRandomChinese = () => {
-    const t = Date.now();
-    return t;
+// const getRandomChinese = () => {
+//     const t = Date.now();
+
+//     return t;
+// }
+
+// console.log(Date.now());
+
+
+function olsa(callback) {
+    let a = [1,3,4,5,6];
+    let element = document.querySelector('.container');
+    callback(element, a);
 }
 
-console.log(Date.now());
+function star(elem, arr) {
+    elem.innerHTML = arr.join(' * ')
+}
+
+function at(elem, arr) {
+    elem.innerHTML = arr.join(' @ ')
+}
+
+let g = Date.now();
+console.log(g)
+
+
+olsa(star);
